@@ -345,6 +345,10 @@ nav ul li ul li a{
    padding: 10px;
 }
 
+.sub-sub-span{
+   padding: 10px;
+}
+
 nav ul li ul li ul {
    width: 350px;
    left: 299px;
@@ -358,6 +362,7 @@ nav ul li:hover > ul{
 .sub-sub-list{
    display: flex;
    justify-content: space-between;
+   align-items: center;
 }
 .sub-sub-list > span{
    display: block;
