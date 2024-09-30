@@ -1,3 +1,4 @@
+
 //Логика для кнопки меню бургер
 
 //При нажатии на header__Burger должен добавиться класс к header__burger и  header__menu
@@ -7,7 +8,7 @@ const headerBurger = document.querySelector(".header__burger");
 
 const headerMenu = document.querySelector(".header__menu");
 
-const header = document.querySelector(".header");
+const header = document.querySelector("header");
 
 const body = document.body;
 
