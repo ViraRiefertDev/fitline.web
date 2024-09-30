@@ -1,0 +1,18 @@
+
+.content {
+   padding: 232.77px 0 0 0;
+}
+.content__text {
+   font-size: 16px;
+   line-height: 20px;
+}
+
+.content__text p {
+   margin: 0 0 20px 0;
+}
+
+@media (max-width: 767px) {
+   .content {
+      padding: 70px 0 0 0;
+   }
+}
