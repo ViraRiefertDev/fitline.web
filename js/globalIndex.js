@@ -24,7 +24,7 @@ headerBurger.addEventListener("click", activeBurger);
 //----Выпадающее меню в бургере
 
 //переменная true, если сайт открыт на устройстве тачскрин
-/* let isMobile = {
+let isMobile = {
    Android: function () {
       return navigator.userAgent.match(/Android/i);
    },
@@ -49,26 +49,14 @@ headerBurger.addEventListener("click", activeBurger);
          isMobile.Windows()
       );
    },
-}; */
+};
 
-//По результату isMobile назначаем body класс touch mouth
 
-/* if(isMobile.any()){
-      body.classList.add('touch');
-      const arrow = document.querySelectorAll('.arrow');
-      for(i=0;0<arrow.length;i++){
-         const thisLink = arrow[i].previousElementSibling;
-         const subMenu = arrow[i].nextElementSibling;
-         const thisArrow =  arrow[i];
-
-         thisLink.classList.add('parent');
-         arrow[i].addEventListener('click', ()=>{
-            subMenu.classList.toggle('open');
-            thisArrow.classList.toggle('active');
-         })
-      }
+if(isMobile.any()){
+      
+      
    }else{
       body.classList.add('mouse');
-   } */
+   }
 
 

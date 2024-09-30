@@ -159,7 +159,7 @@ h6 {
 .header__list li {
    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
    list-style: none;
-   padding: 0 0.2rem;
+   padding: 0 0.7%;
    transition: background-color 0.3s ease;
 }
 
@@ -179,11 +179,10 @@ background-color: #6c757d;
 nav ul li{
    font-size: 21px;
 }
-.header__link {
+.header__menu-item {
    color: #fff;
    font-size: 20px;
    text-decoration: none;
-   padding: 0 0.8rem;
 }
 
 
@@ -191,7 +190,7 @@ nav ul li{
    nav ul li{
       font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1180 - 300)));
    }
-   .header__link {
+   .header__menu-item {
       font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1180 - 300)));
    }
 }
@@ -200,12 +199,12 @@ nav ul li{
    nav ul li{
       font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1180 - 300)));
    }
-   .header__link {
+   .header__menu-item {
       font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1180 - 300)));
    }
 
    .header__list li {
-      padding: 0;
+      padding: 0 0.7%;
       list-style: none;
    }
 }
@@ -314,16 +313,15 @@ nav ul li{
    .header__list li {
       margin: 0 0 20px 0;
    }
-   .header__link {
+   .header__menu-item {
       font-size: 24px;
    }
 }
 
-
+/* -------------------------------------------------------- */
 /* Выпадающий список */
 nav ul li{
-   position: relative;
-   
+   position: relative; 
 }
 nav ul li ul {
    margin: 52px 0 0 0;
@@ -339,7 +337,7 @@ nav ul li ul {
 
 nav ul li ul li{
    width: 100%;
-   border: 1px solid rgba(206, 201, 201, 0.1);
+   border-bottom: 1px solid rgba(206, 201, 201, 0.1);
 }
 nav ul li ul li a{
    color: #fff;
@@ -364,3 +362,19 @@ nav ul li:hover > ul{
 .sub-sub-list > span{
    display: block;
 }
+/* Работа с бургером */
+@media (max-width: 767px){
+   nav ul li ul {
+      position: relative;
+      border-right-color: #212529;
+   }
+   .header__list li:hover {
+      background-color: #212529;
+      transition: background-color 0.3s ease;
+   }
+   nav ul li{
+      font-size: 21px;
+   }
+}
+
+/* ------------------------------------------- */
