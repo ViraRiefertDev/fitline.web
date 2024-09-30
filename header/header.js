@@ -7,5 +7,5 @@ fetch('header/header.html')
 
 // Теперь вызываем globalIndex.js
 const script = document.createElement('script');
-script.src = '/js/globalIndex.js';
+script.src = 'js/globalIndex.js';
 document.body.appendChild(script);
