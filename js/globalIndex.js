@@ -54,10 +54,25 @@ let isMobile = {
 
 
 if(isMobile.any()){
-      
+   const listItemsWithSubMenu = document.querySelectorAll('li.sub-menu');
+
+   for(let listItem of listItemsWithSubMenu){
+      dropDownMenuByClick = ()=>{
+         const subMenu = listItem.querySelector('.sub-list');
+         subMenu.classList.toggle('drop-menu-touch');
+      }
+   
+      listItem.addEventListener('click', dropDownMenuByClick)
+   }
+   
+   
       
    }else{
-      body.classList.add('mouse');
+      const subLists = document.querySelectorAll('.sub-list');
+      console.log(subLists);
+      for(let subList of subLists){
+         subList.classList.add('drop-menu-mouse');
+      }
    }
 
 
