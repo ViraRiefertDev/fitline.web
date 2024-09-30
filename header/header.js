@@ -8,4 +8,5 @@ fetch('/header/header.html')
 // Теперь вызываем globalIndex.js
 const script = document.createElement('script');
 script.src = '/js/globalIndex.js';
+script.setAttribute('defer','');
 document.body.appendChild(script);
