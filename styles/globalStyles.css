@@ -2,7 +2,7 @@
 /* Обнуление */
 *,
 *:before,
-*::after {
+*:after {
    padding: 0;
    margin: 0;
    border: 0;
@@ -10,16 +10,87 @@
    outline: 0;
    font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
 html {
    overflow-x: hidden;
 }
-body {
-   width: 100%;
-   min-height: 100vh;
+
+input,
+button,
+textarea {
+   font-family: inherit;
 }
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
 img {
+   vertical-align: top;
    max-width: 100%;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
 
 /* --Header---------------------------------------------------------- */
 .container {
@@ -105,22 +176,32 @@ background-color: #6c757d;
    background-color: #a7c520;
 }
 
+nav ul li{
+   font-size: 21px;
+}
 .header__link {
    color: #fff;
-   font-size: 21px;
+   font-size: 20px;
    text-decoration: none;
    padding: 0 0.8rem;
 }
 
+
 @media (max-width: 1100px) {
+   nav ul li{
+      font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1180 - 300)));
+   }
    .header__link {
-      font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1180 - 300)));
+      font-size: calc(16px + (17 - 16) * ((100vw - 300px) / (1180 - 300)));
    }
 }
 
 @media (max-width: 930px) {
+   nav ul li{
+      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1180 - 300)));
+   }
    .header__link {
-      font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1180 - 300)));
+      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1180 - 300)));
    }
 
    .header__list li {
@@ -236,4 +317,50 @@ background-color: #6c757d;
    .header__link {
       font-size: 24px;
    }
+}
+
+
+/* Выпадающий список */
+nav ul li{
+   position: relative;
+   
+}
+nav ul li ul {
+   margin: 52px 0 0 0;
+   position: absolute;
+   left: 0;
+   width: 300px;
+   background-color: #212529;
+   z-index: 2;
+   display: none;
+   line-height: 30px;
+}
+
+
+nav ul li ul li{
+   width: 100%;
+   border: 1px solid rgba(206, 201, 201, 0.1);
+}
+nav ul li ul li a{
+   color: #fff;
+   display: block;
+   padding: 10px;
+}
+
+nav ul li ul li ul {
+   width: 350px;
+   left: 299px;
+   top:-54px;
+}
+nav ul li:hover > ul{
+   display: initial;
+}
+
+/* Стрелочка */
+.sub-sub-list{
+   display: flex;
+   justify-content: space-between;
+}
+.sub-sub-list > span{
+   display: block;
 }
