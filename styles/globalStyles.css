@@ -107,7 +107,7 @@ background-color: #6c757d;
 
 .header__link {
    color: #fff;
-   font-size: calc(18px + (21 - 18) * ((100vw - 300px) / (1180 - 300)));
+   font-size: 21px;
    text-decoration: none;
    padding: 0 0.8rem;
 }
