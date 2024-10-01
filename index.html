@@ -4,15 +4,71 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Fitline</title>
-      <!-- Добавляем header.html и в нем globalIndex.js -->
-      <script src="header/header.js" defer></script>
       <link rel="stylesheet" href="./styles/globalStyles.css" />
       <link rel="stylesheet" href="./style.css" />
+      <script src="./js/globalIndex.js" defer></script>
       
    </head>
    <body>
       <div class="root">
-         <header class="header" id = 'header-placeholder'></header>
+         <header class="header">
+            <div class="container">
+               <div class="header__body">
+                  <a href="/index.html" class="header__logo">
+                     <img
+                        src="//site-235286.mozfiles.com/files/235286/medium/11430326_10200680469049826_1219443411_o.jpg"
+                        alt="logo"
+                     />
+                  </a>
+                  <!--Header Burger-->
+                  <div class="header__burger">
+                     <!--Span нужен для рисования бургера-->
+                     <span></span>
+                  </div>
+                  <nav class="header__menu">
+                     <ul class="header__list">
+                        <li class="link-color_mod">
+                           <a href="/index.html" class="header__menu-item">Главная</a>
+                        </li>
+                        <li class="header__menu-item sub-menu">
+                           Программы питания &blacktriangledown;
+                           <ul class="sub-list">
+                              <li><a href="#">Диеты</a></li>
+                              <li><a href="#">Спортивное питание</a></li>
+                              <li><a href="#">Детокс программы</a></li>
+                           </ul>
+                        </li>
+         
+                        <li class="header__menu-item sub-menu">
+                           Beauty & Care &blacktriangledown;
+                           <ul class="sub-list">
+                              <li><a href="#">Крема</a></li>
+                              <li><a href="#">Пилинги и скрабы</a></li>
+                              <li><a href="#">Маски для лица</a></li>
+                           </ul>
+                        </li>
+                        <li class="header__menu-item sub-menu">
+                           Рецепты &blacktriangledown;
+                           <ul class="sub-list">
+                              <li><a href="#">Коктейли</a></li>
+                              <li><a href="#">Десерты</a></li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a
+                              href="pages/contactUs/contactUs.html"
+                              class="header__menu-item"
+                              >Связаться с нами</a
+                           >
+                        </li>
+                        <li>
+                           <a href="" class="header__menu-item">Присоединяйся</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
          <div class="content">
             <div class="container__content">
                <div class="content__text">
